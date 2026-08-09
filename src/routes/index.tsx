@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logo from "@/assets/dev2soft-logo.png.asset.json";
+import logo from "@/assets/dev2soft-logo-light.png.asset.json";
 import { Marquee } from "@/components/site/Marquee";
 
 export const Route = createFileRoute("/")({
@@ -65,7 +65,7 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center gap-3">
-            <img src={logo.url} alt="DEV2SOFT logo" className="h-9 w-auto invert" />
+            <img src={logo.url} alt="DEV2SOFT logo" className="h-9 w-auto " />
           </a>
           <nav className="hidden gap-8 md:flex">
             {["Services", "Work", "Process"].map((l) => (
@@ -201,7 +201,7 @@ function Index() {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-6 py-10">
-          <img src={logo.url} alt="DEV2SOFT" className="h-8 w-auto invert" />
+          <img src={logo.url} alt="DEV2SOFT" className="h-8 w-auto " />
           <p className="font-mono text-xs text-muted-foreground">
             © {new Date().getFullYear()} DEV2SOFT — Innovate, Automate, Elevate
           </p>
