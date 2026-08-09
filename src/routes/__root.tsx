@@ -80,15 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "DEV2SOFT — Software Development Company" },
       {
         name: "description",
-        content:
-          "DEV2SOFT builds web apps, mobile apps, AI automation and cloud systems.",
+        content: "DEV2SOFT builds web apps, mobile apps, AI automation and cloud systems.",
       },
       { name: "author", content: "DEV2SOFT" },
       { property: "og:title", content: "DEV2SOFT — Software Development Company" },
       {
         property: "og:description",
-        content:
-          "DEV2SOFT builds web apps, mobile apps, AI automation and cloud systems.",
+        content: "DEV2SOFT builds web apps, mobile apps, AI automation and cloud systems.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

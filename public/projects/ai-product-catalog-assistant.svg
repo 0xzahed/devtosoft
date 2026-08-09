@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#141414"/>
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1a1a1a"/>
+      <stop offset="1" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <radialGradient id="aiglow" cx="0.5" cy="0.5" r="0.5">
+      <stop stop-color="#c4f000" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#c4f000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g3)"/>
+  <!-- grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="200" y1="0" x2="200" y2="675"/>
+    <line x1="400" y1="0" x2="400" y2="675"/>
+    <line x1="600" y1="0" x2="600" y2="675"/>
+    <line x1="800" y1="0" x2="800" y2="675"/>
+    <line x1="1000" y1="0" x2="1000" y2="675"/>
+  </g>
+  <!-- AI glow -->
+  <circle cx="600" cy="340" r="250" fill="url(#aiglow)"/>
+  <!-- neural network -->
+  <g stroke="#c4f000" stroke-opacity="0.3" stroke-width="1.5">
+    <line x1="350" y1="250" x2="550" y2="200"/>
+    <line x1="350" y1="250" x2="550" y2="340"/>
+    <line x1="350" y1="250" x2="550" y2="480"/>
+    <line x1="350" y1="400" x2="550" y2="200"/>
+    <line x1="350" y1="400" x2="550" y2="340"/>
+    <line x1="350" y1="400" x2="550" y2="480"/>
+    <line x1="350" y1="550" x2="550" y2="340"/>
+    <line x1="350" y1="550" x2="550" y2="480"/>
+    <line x1="550" y1="200" x2="750" y2="270"/>
+    <line x1="550" y1="200" x2="750" y2="400"/>
+    <line x1="550" y1="340" x2="750" y2="270"/>
+    <line x1="550" y1="340" x2="750" y2="400"/>
+    <line x1="550" y1="480" x2="750" y2="400"/>
+    <line x1="550" y1="480" x2="750" y2="530"/>
+    <line x1="750" y1="270" x2="950" y2="340"/>
+    <line x1="750" y1="400" x2="950" y2="340"/>
+    <line x1="750" y1="530" x2="950" y2="340"/>
+  </g>
+  <!-- nodes -->
+  <g>
+    <circle cx="350" cy="250" r="10" fill="#c4f000" fill-opacity="0.6"/>
+    <circle cx="350" cy="400" r="10" fill="#c4f000" fill-opacity="0.6"/>
+    <circle cx="350" cy="550" r="10" fill="#c4f000" fill-opacity="0.6"/>
+    <circle cx="550" cy="200" r="12" fill="#c4f000" fill-opacity="0.8"/>
+    <circle cx="550" cy="340" r="14" fill="#c4f000"/>
+    <circle cx="550" cy="480" r="12" fill="#c4f000" fill-opacity="0.8"/>
+    <circle cx="750" cy="270" r="10" fill="#c4f000" fill-opacity="0.7"/>
+    <circle cx="750" cy="400" r="10" fill="#c4f000" fill-opacity="0.7"/>
+    <circle cx="750" cy="530" r="10" fill="#c4f000" fill-opacity="0.7"/>
+    <circle cx="950" cy="340" r="16" fill="#c4f000"/>
+  </g>
+  <!-- chat bubble -->
+  <g>
+    <rect x="60" y="460" width="260" height="80" rx="12" fill="#1e1e1e" stroke="#c4f000" stroke-opacity="0.3"/>
+    <text x="80" y="490" font-family="monospace" font-size="12" fill="#c4f000">USER</text>
+    <text x="80" y="515" font-family="sans-serif" font-size="13" fill="#ccc">"show me eco sneakers</text>
+    <text x="80" y="532" font-family="sans-serif" font-size="13" fill="#ccc">under $80"</text>
+  </g>
+  <g>
+    <rect x="880" y="460" width="260" height="80" rx="12" fill="#c4f000" fill-opacity="0.15" stroke="#c4f000" stroke-opacity="0.4"/>
+    <text x="900" y="490" font-family="monospace" font-size="12" fill="#c4f000">AI</text>
+    <text x="900" y="515" font-family="sans-serif" font-size="13" fill="#fff">3 matches found ·</text>
+    <text x="900" y="532" font-family="sans-serif" font-size="13" fill="#fff">citing 12 reviews</text>
+  </g>
+  <!-- label -->
+  <text x="60" y="80" font-family="monospace" font-size="14" fill="#c4f000" letter-spacing="3">RETAIL / LUMO</text>
+  <text x="60" y="160" font-family="Arial Narrow, sans-serif" font-size="48" fill="#ffffff" font-weight="bold">AI CATALOG</text>
+  <text x="60" y="210" font-family="Arial Narrow, sans-serif" font-size="48" fill="#c4f000" font-weight="bold">ASSISTANT</text>
+</svg>

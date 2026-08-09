@@ -7,17 +7,17 @@ const groups = [
 
 export function TechStack() {
   return (
-    <section id="stack" className="mx-auto max-w-6xl px-6 py-24">
-      <h2 className="text-6xl md:text-8xl">
+    <section id="stack" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+      <h2 className="text-4xl md:text-5xl">
         TECH STACK<span className="text-primary">.</span>
       </h2>
-      <p className="mt-6 max-w-xl text-muted-foreground">
+      <p className="mt-6 max-w-xl text-base text-muted-foreground">
         Boring, proven tools where it matters. New tools only where they earn their place.
       </p>
-      <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-10 grid gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4">
         {groups.map((g) => (
           <div key={g.k}>
-            <h3 className="eyebrow text-lg text-primary">{g.k}</h3>
+            <h3 className="eyebrow text-sm text-primary">{g.k}</h3>
             <ul className="mt-4 space-y-2">
               {g.items.map((i) => (
                 <li

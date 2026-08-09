@@ -94,7 +94,7 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="eyebrow bg-primary px-8 py-4 text-xl text-primary-foreground transition-transform hover:-translate-y-0.5"
+        className="eyebrow bg-primary px-6 py-3 text-base text-primary-foreground transition-transform hover:-translate-y-0.5"
       >
         Send enquiry
       </button>

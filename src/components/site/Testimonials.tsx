@@ -18,17 +18,17 @@ const quotes = [
 
 export function Testimonials() {
   return (
-    <section id="clients" className="mx-auto max-w-6xl px-6 py-24">
-      <h2 className="text-6xl md:text-8xl">
+    <section id="clients" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+      <h2 className="text-4xl md:text-5xl">
         CLIENT VOICES<span className="text-primary">.</span>
       </h2>
-      <div className="mt-14 grid gap-px bg-border md:grid-cols-3">
+      <div className="mt-10 grid gap-px bg-border sm:mt-14 md:grid-cols-3">
         {quotes.map((t) => (
-          <figure key={t.n} className="bg-background p-10">
-            <span className="font-display text-6xl leading-none text-primary">“</span>
-            <blockquote className="mt-2 text-lg text-foreground">{t.q}</blockquote>
+          <figure key={t.n} className="bg-background p-6 sm:p-10">
+            <span className="font-display text-4xl leading-none text-primary">“</span>
+            <blockquote className="mt-2 text-base text-foreground">{t.q}</blockquote>
             <figcaption className="mt-8">
-              <p className="eyebrow text-base text-foreground">{t.n}</p>
+              <p className="eyebrow text-sm text-foreground">{t.n}</p>
               <p className="font-mono text-xs text-muted-foreground">{t.r}</p>
             </figcaption>
           </figure>

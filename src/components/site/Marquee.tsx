@@ -14,10 +14,7 @@ export function Marquee() {
         {[0, 1].map((dup) => (
           <div key={dup} className="flex shrink-0 gap-10">
             {items.map((item) => (
-              <span
-                key={item}
-                className="eyebrow text-2xl text-primary-foreground"
-              >
+              <span key={item} className="eyebrow text-base text-primary-foreground">
                 {item} <span className="opacity-40">///</span>
               </span>
             ))}

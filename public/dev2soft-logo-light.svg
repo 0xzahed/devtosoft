@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" fill="none">
+  <defs>
+    <linearGradient id="logograd" x1="0" y1="0" x2="240" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c4f000"/>
+      <stop offset="1" stop-color="#a8d600"/>
+    </linearGradient>
+  </defs>
+  <!-- icon mark -->
+  <g>
+    <rect x="2" y="2" width="44" height="44" rx="8" fill="#1a1a1a" stroke="#c4f000" stroke-width="1.5"/>
+    <path d="M 14 16 L 14 32 L 18 32 L 18 24 L 26 32 L 31 32 L 23 24 L 31 16 L 26 16 L 18 24 L 18 16 Z" fill="#c4f000"/>
+    <rect x="33" y="16" width="4" height="16" fill="#c4f000" fill-opacity="0.5"/>
+  </g>
+  <!-- wordmark -->
+  <text x="56" y="22" font-family="Arial Narrow, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" letter-spacing="1">DEV2SOFT</text>
+  <text x="56" y="38" font-family="monospace" font-size="9" fill="#c4f000" letter-spacing="3">INNOVATE · AUTOMATE · ELEVATE</text>
+</svg>

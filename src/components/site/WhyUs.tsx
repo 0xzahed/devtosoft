@@ -20,15 +20,15 @@ const points = [
 export function WhyUs() {
   return (
     <section id="why" className="grid-lines border-b border-border">
-      <div className="mx-auto max-w-6xl px-6 py-24">
-        <h2 className="text-6xl md:text-8xl">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+        <h2 className="text-4xl md:text-5xl">
           WHY DEV2SOFT<span className="text-primary">.</span>
         </h2>
-        <div className="mt-14 grid gap-10 sm:grid-cols-2">
+        <div className="mt-10 grid gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-10">
           {points.map((p) => (
             <div key={p.t} className="border-l-2 border-primary pl-6">
-              <h3 className="text-3xl text-foreground">{p.t}</h3>
-              <p className="mt-3 max-w-md text-muted-foreground">{p.b}</p>
+              <h3 className="text-xl text-foreground">{p.t}</h3>
+              <p className="mt-3 max-w-md text-sm text-muted-foreground">{p.b}</p>
             </div>
           ))}
         </div>
