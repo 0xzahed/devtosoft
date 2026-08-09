@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Your Brand's Digital Home
+
+eta amar software company amar jonno ekta site banaiya dew logo dekhe bujhe new site er design ta kemon howa ucit oikhane sob color contrust dewa ache do this
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://devtosoft.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/20db9433-6bb5-4beb-bf2c-db2eed2084b8).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
