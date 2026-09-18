@@ -36,7 +36,7 @@ function ProjectDetailPage() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
           <Link to="/" className="flex items-center gap-3">
-            <img src="/dev2soft-logo-light.svg" alt="DEV2SOFT logo" className="h-8 w-auto sm:h-9" />
+            <img src="/logo.png" alt="DevToSoft logo" className="h-8 w-auto sm:h-9" />
           </Link>
           <Link
             to="/projects"
