@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { projects } from "@/lib/projects";
 import { Marquee } from "@/components/site/Marquee";
 import { Stats } from "@/components/site/Stats";
+import { TrustBar } from "@/components/site/TrustBar";
+import { ProblemsWeSolve } from "@/components/site/ProblemsWeSolve";
 import { WhyUs } from "@/components/site/WhyUs";
 import { TechStack } from "@/components/site/TechStack";
 import { Pricing } from "@/components/site/Pricing";
@@ -9,6 +11,11 @@ import { Testimonials } from "@/components/site/Testimonials";
 import { FAQ } from "@/components/site/FAQ";
 import { ContactForm } from "@/components/site/ContactForm";
 import { BottomNav } from "@/components/site/BottomNav";
+import { AISolutions } from "@/components/site/AISolutions";
+import { SecurityQuality } from "@/components/site/SecurityQuality";
+import { CaseStudies } from "@/components/site/CaseStudies";
+import { BeforeAfter } from "@/components/site/BeforeAfter";
+import { EngineeringPrinciples } from "@/components/site/EngineeringPrinciples";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -88,7 +95,20 @@ const industries = [
   "Media",
 ];
 
-const navLinks = ["Services", "Work", "Process", "Stack", "Pricing", "FAQ"];
+const navLinks = [
+  "Services",
+  "Problems",
+  "AI",
+  "Work",
+  "Why",
+  "Transform",
+  "Principles",
+  "Process",
+  "Stack",
+  "Security",
+  "Pricing",
+  "FAQ",
+];
 
 function Index() {
   return (
@@ -98,12 +118,12 @@ function Index() {
           <a href="#top" className="flex items-center gap-3">
             <img src="/logo.png" alt="DevToSoft logo" className="h-8 w-auto sm:h-9" />
           </a>
-          <nav className="hidden gap-7 lg:flex">
+          <nav className="hidden gap-5 lg:flex">
             {navLinks.map((l) => (
               <a
                 key={l}
                 href={`#${l.toLowerCase()}`}
-                className="eyebrow text-lg text-muted-foreground transition-colors hover:text-primary"
+                className="eyebrow text-xs text-muted-foreground transition-colors hover:text-primary"
               >
                 {l}
               </a>
@@ -125,7 +145,8 @@ function Index() {
           <div className="volt-glow pointer-events-none absolute -right-40 -top-40 h-[36rem] w-[36rem] rounded-full" />
           <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-36">
             <p className="eyebrow text-sm text-primary">
-              Innovate, Automate, Elevate <span className="tracking-tight">»»»</span>
+              Innovate, Automate, Elevate{" "}
+              <span className="tracking-tight">»»»</span>
             </p>
             <h1 className="mt-6 max-w-4xl text-[clamp(2.5rem,6vw,4.5rem)] text-foreground">
               WE BUILD THE
@@ -135,8 +156,9 @@ function Index() {
               <span className="text-primary">RUNS YOUR BUSINESS.</span>
             </h1>
             <p className="mt-8 max-w-xl text-base text-muted-foreground">
-              DevToSoft is a product engineering studio. We design, build and maintain web, mobile
-              and AI systems for companies that need to ship fast without breaking things.
+              DevToSoft is a product engineering studio. We design, build and
+              maintain web, mobile and AI systems for companies that need to ship
+              fast without breaking things.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
@@ -160,15 +182,19 @@ function Index() {
           </div>
         </section>
 
+        <TrustBar />
         <Marquee />
         <Stats />
+
+        <ProblemsWeSolve />
 
         <section id="services" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
           <h2 className="text-4xl md:text-5xl">
             SERVICES<span className="text-primary">.</span>
           </h2>
           <p className="mt-6 max-w-xl text-base text-muted-foreground">
-            Six ways we plug in. Pick one or combine them into a full product team.
+            Six ways we plug in. Pick one or combine them into a full product
+            team.
           </p>
           <div className="mt-10 grid gap-px border border-border bg-border sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
             {services.map((s) => (
@@ -180,7 +206,9 @@ function Index() {
                 <h3 className="mt-4 text-2xl text-foreground transition-colors group-hover:text-primary">
                   {s.title}
                 </h3>
-                <p className="mt-4 max-w-sm text-sm text-muted-foreground">{s.body}</p>
+                <p className="mt-4 max-w-sm text-sm text-muted-foreground">
+                  {s.body}
+                </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {s.tags.map((t) => (
                     <span
@@ -196,62 +224,13 @@ function Index() {
           </div>
         </section>
 
-        <section id="work" className="border-y border-border bg-card/40">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <div className="flex items-end justify-between gap-4">
-              <h2 className="text-4xl md:text-5xl">
-                SELECTED WORK<span className="text-primary">.</span>
-              </h2>
-              <Link
-                to="/projects"
-                className="eyebrow hidden shrink-0 text-sm text-muted-foreground transition-colors hover:text-primary sm:block"
-              >
-                View all →
-              </Link>
-            </div>
-            <div className="mt-10 grid gap-px border border-border bg-border sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
-              {projects.map((w) => (
-                <Link
-                  key={w.slug}
-                  to="/projects/$slug"
-                  params={{ slug: w.slug }}
-                  className="group flex flex-col bg-background transition-colors hover:bg-card"
-                >
-                  <div className="relative aspect-[16/9] overflow-hidden border-b border-border">
-                    <img
-                      src={w.image}
-                      alt={w.title}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col p-5 sm:p-6">
-                    <div className="flex items-center justify-between">
-                      <span className="eyebrow text-xs text-primary">{w.tag}</span>
-                      <span className="font-mono text-xs text-muted-foreground">{w.year}</span>
-                    </div>
-                    <h3 className="mt-3 text-lg text-foreground transition-colors group-hover:text-primary sm:text-xl">
-                      {w.title}
-                    </h3>
-                    <div className="mt-auto flex items-center justify-between pt-4">
-                      <span className="font-mono text-xs text-primary">{w.metric}</span>
-                      <span className="eyebrow text-xs text-muted-foreground transition-transform group-hover:translate-x-1">
-                        →
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <Link
-              to="/projects"
-              className="eyebrow mt-8 inline-block text-sm text-muted-foreground transition-colors hover:text-primary sm:hidden"
-            >
-              View all projects →
-            </Link>
-          </div>
-        </section>
+        <AISolutions />
+
+        <CaseStudies />
 
         <WhyUs />
+        <BeforeAfter />
+        <EngineeringPrinciples />
 
         <section id="process" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
           <h2 className="text-4xl md:text-5xl">
@@ -260,7 +239,9 @@ function Index() {
           <div className="mt-10 grid gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4">
             {steps.map((s, i) => (
               <div key={s.k} className="border-t-2 border-primary pt-6">
-                <span className="font-mono text-sm text-muted-foreground">0{i + 1}</span>
+                <span className="font-mono text-sm text-muted-foreground">
+                  0{i + 1}
+                </span>
                 <h3 className="mt-2 text-2xl text-foreground">{s.k}</h3>
                 <p className="mt-3 text-sm text-muted-foreground">{s.v}</p>
               </div>
@@ -269,6 +250,8 @@ function Index() {
         </section>
 
         <TechStack />
+
+        <SecurityQuality />
 
         <section className="border-y border-border">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20">
@@ -300,23 +283,31 @@ function Index() {
                 <span className="text-primary">.</span>
               </h2>
               <p className="mt-6 max-w-md text-base text-muted-foreground">
-                Tell us what you want to build. We reply within one working day with a scope and a
-                timeline.
+                Tell us what you want to build. We reply within one working day
+                with a scope and a timeline.
               </p>
               <div className="mt-10 space-y-4 font-mono text-sm">
                 <p className="text-muted-foreground">
                   EMAIL:{" "}
-                  <a href="mailto:hello@dev2soft.com" className="text-primary hover:underline">
+                  <a
+                    href="mailto:hello@dev2soft.com"
+                    className="text-primary hover:underline"
+                  >
                     hello@dev2soft.com
                   </a>
                 </p>
                 <p className="text-muted-foreground">
                   PHONE:{" "}
-                  <a href="tel:+8801744546898" className="text-primary hover:underline">
+                  <a
+                    href="tel:+8801744546898"
+                    className="text-primary hover:underline"
+                  >
                     +880 1744-546898
                   </a>
                 </p>
-                <p className="text-muted-foreground">HOURS: Sun–Thu, 10:00–19:00 (GMT+6)</p>
+                <p className="text-muted-foreground">
+                  HOURS: Sun–Thu, 10:00–19:00 (GMT+6)
+                </p>
               </div>
             </div>
             <ContactForm />
@@ -361,7 +352,7 @@ function Index() {
           <div>
             <h3 className="eyebrow text-base text-primary">Company</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              {["Work", "Process", "Pricing", "FAQ"].map((l) => (
+              {["Work", "Why", "Process", "Pricing", "FAQ"].map((l) => (
                 <li key={l}>
                   <a href={`#${l.toLowerCase()}`} className="hover:text-foreground">
                     {l}
@@ -374,12 +365,18 @@ function Index() {
             <h3 className="eyebrow text-base text-primary">Contact</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="mailto:hello@dev2soft.com" className="hover:text-foreground">
+                <a
+                  href="mailto:hello@dev2soft.com"
+                  className="hover:text-foreground"
+                >
                   hello@dev2soft.com
                 </a>
               </li>
               <li>
-                <a href="tel:+8801744546898" className="hover:text-foreground">
+                <a
+                  href="tel:+8801744546898"
+                  className="hover:text-foreground"
+                >
                   +880 1744-546898
                 </a>
               </li>
