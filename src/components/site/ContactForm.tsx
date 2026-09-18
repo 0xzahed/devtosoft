@@ -11,7 +11,7 @@ export function ContactForm() {
   const [msg, setMsg] = useState("");
 
   const mailto = `mailto:hello@dev2soft.com?subject=${encodeURIComponent(
-    `Project enquiry — ${need}`,
+    `Project enquiry: ${need}`,
   )}&body=${encodeURIComponent(
     `Name: ${name}\nEmail: ${email}\nNeed: ${need}\nBudget: ${budget}\n\n${msg}`,
   )}`;

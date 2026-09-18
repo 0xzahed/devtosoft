@@ -10,7 +10,7 @@ const quotes = [
     r: "Head of Product, Lumo Retail",
   },
   {
-    q: "Best engineering partner we've had. They push back when an idea is wrong — that's rare.",
+    q: "Best engineering partner we've had. They push back when an idea is wrong, and that's rare.",
     n: "Daniel Okoye",
     r: "Founder, FleetIQ",
   },

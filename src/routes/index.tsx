@@ -168,7 +168,7 @@ function Index() {
             SERVICES<span className="text-primary">.</span>
           </h2>
           <p className="mt-6 max-w-xl text-base text-muted-foreground">
-            Six ways we plug in — pick one or combine them into a full product team.
+            Six ways we plug in. Pick one or combine them into a full product team.
           </p>
           <div className="mt-10 grid gap-px border border-border bg-border sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
             {services.map((s) => (
@@ -305,18 +305,18 @@ function Index() {
               </p>
               <div className="mt-10 space-y-4 font-mono text-sm">
                 <p className="text-muted-foreground">
-                  EMAIL —{" "}
+                  EMAIL:{" "}
                   <a href="mailto:hello@dev2soft.com" className="text-primary hover:underline">
                     hello@dev2soft.com
                   </a>
                 </p>
                 <p className="text-muted-foreground">
-                  PHONE —{" "}
+                  PHONE:{" "}
                   <a href="tel:+8801000000000" className="text-primary hover:underline">
                     +880 1000-000000
                   </a>
                 </p>
-                <p className="text-muted-foreground">HOURS — Sun–Thu, 10:00–19:00 (GMT+6)</p>
+                <p className="text-muted-foreground">HOURS: Sun–Thu, 10:00–19:00 (GMT+6)</p>
               </div>
             </div>
             <ContactForm />

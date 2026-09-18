@@ -29,7 +29,7 @@ export const projects: Project[] = [
     duration: "7 weeks",
     team: "2 engineers + 1 designer",
     summary:
-      "An automated reconciliation platform that matches thousands of daily transactions across payment providers, banks and ledgers — flagging only the exceptions for human review.",
+      "An automated reconciliation platform that matches thousands of daily transactions across payment providers, banks and ledgers, flagging only the exceptions for human review.",
     challenge:
       "NorthPay's finance team spent 30+ hours every week manually matching settlements from four payment providers against bank statements and internal ledgers. Mismatches were caught late, reconciliation reports were built by hand, and month-end close took five days.",
     solution:
@@ -38,7 +38,7 @@ export const projects: Project[] = [
       "Manual reconciliation hours cut by 72% in the first month",
       "Month-end close reduced from 5 days to under 8 hours",
       "Exception queue now handles < 2% of total transaction volume",
-      "Zero data migration downtime — cutover ran in parallel for 2 weeks",
+      "Zero data migration downtime; cutover ran in parallel for 2 weeks",
     ],
     stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "AWS SQS"],
     services: ["Web Platform", "Cloud & DevOps"],
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     services: ["Web Platform", "Cloud & DevOps", "UI/UX Design"],
     testimonial: {
       quote:
-        "Best engineering partner we've had. They push back when an idea is wrong — that's rare.",
+        "Best engineering partner we've had. They push back when an idea is wrong, and that's rare.",
       name: "Daniel Okoye",
       role: "Founder, FleetIQ",
     },
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     duration: "16 weeks",
     team: "3 engineers + 1 designer + 1 QA",
     summary:
-      "A cross-platform patient app for booking appointments, accessing records and receiving lab results — paired with a clinic-side management portal for scheduling and charting.",
+      "A cross-platform patient app for booking appointments, accessing records and receiving lab results, paired with a clinic-side management portal for scheduling and charting.",
     challenge:
       "MediCore's 40 clinics ran on paper diaries and a fragmented desktop scheduler. Patients booked by phone, waited on hold, and had no way to see results online. Clinics had no shared view of patient history across locations.",
     solution:
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     duration: "14 weeks",
     team: "4 engineers + 1 designer",
     summary:
-      "A low-latency live classroom platform with interactive whiteboards, breakout rooms, attendance analytics and a teacher dashboard — built to scale to 50k concurrent learners.",
+      "A low-latency live classroom platform with interactive whiteboards, breakout rooms, attendance analytics and a teacher dashboard, built to scale to 50k concurrent learners.",
     challenge:
       "LearnLoop's existing video provider was expensive and dropped frames at scale. Teachers had no tools for engagement tracking, breakout rooms were manual, and attendance reporting was a spreadsheet exercise.",
     solution:
