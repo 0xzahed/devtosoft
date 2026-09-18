@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import React from "react";
 import { projects } from "@/lib/projects";
 import { Marquee } from "@/components/site/Marquee";
 import { Stats } from "@/components/site/Stats";
@@ -14,7 +15,6 @@ import { BottomNav } from "@/components/site/BottomNav";
 import { AISolutions } from "@/components/site/AISolutions";
 import { SecurityQuality } from "@/components/site/SecurityQuality";
 import { CaseStudies } from "@/components/site/CaseStudies";
-import { BeforeAfter } from "@/components/site/BeforeAfter";
 import { EngineeringPrinciples } from "@/components/site/EngineeringPrinciples";
 
 export const Route = createFileRoute("/")({
@@ -101,7 +101,6 @@ const navLinks = [
   "AI",
   "Work",
   "Why",
-  "Transform",
   "Principles",
   "Process",
   "Stack",
@@ -188,39 +187,58 @@ function Index() {
 
         <ProblemsWeSolve />
 
-        <section id="services" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-          <h2 className="text-4xl md:text-5xl">
-            SERVICES<span className="text-primary">.</span>
-          </h2>
-          <p className="mt-6 max-w-xl text-base text-muted-foreground">
-            Six ways we plug in. Pick one or combine them into a full product
-            team.
-          </p>
-          <div className="mt-10 grid gap-px border border-border bg-border sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
-            {services.map((s) => (
-              <div
-                key={s.n}
-                className="group bg-background p-6 sm:p-10 transition-colors hover:bg-card"
-              >
-                <span className="font-mono text-sm text-primary">{s.n}</span>
-                <h3 className="mt-4 text-2xl text-foreground transition-colors group-hover:text-primary">
-                  {s.title}
-                </h3>
-                <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-                  {s.body}
-                </p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {s.tags.map((t) => (
-                    <span
-                      key={t}
-                      className="border border-border px-3 py-1 font-mono text-xs text-muted-foreground"
-                    >
-                      {t}
-                    </span>
-                  ))}
+        <section id="services" className="grid-lines relative overflow-hidden border-b border-border">
+          <div className="volt-glow pointer-events-none absolute -bottom-20 left-1/2 h-[20rem] w-[20rem] -translate-x-1/2 rounded-full" />
+          <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+            <h2 className="text-4xl md:text-5xl">
+              SERVICES<span className="text-primary">.</span>
+            </h2>
+            <p className="mt-6 max-w-xl text-base text-muted-foreground">
+              Six ways we plug in. Pick one or combine them into a full product
+              team.
+            </p>
+            <div className="mt-10 grid gap-px border border-border bg-border sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
+              {services.map((s) => (
+                <div
+                  key={s.n}
+                  className="group bg-background p-6 sm:p-10 transition-colors hover:bg-card"
+                >
+                  <span className="font-mono text-sm text-primary">{s.n}</span>
+                  <h3 className="mt-4 text-2xl text-foreground transition-colors group-hover:text-primary">
+                    {s.title}
+                  </h3>
+                  <p className="mt-4 max-w-sm text-sm text-muted-foreground">
+                    {s.body}
+                  </p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {s.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="border border-border px-3 py-1 font-mono text-xs text-muted-foreground"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+              ))}
+            </div>
+            <div className="mt-16 overflow-hidden border-t border-border pt-8">
+              <div className="flex w-max animate-[marquee_25s_linear_infinite]">
+                {[0, 1].map((dup) => (
+                  <div key={dup} className="flex shrink-0 gap-12">
+                    {services.flatMap((s) => s.tags).map((tag) => (
+                      <span
+                        key={tag}
+                        className="font-mono text-sm text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        {tag} <span className="opacity-30">///</span>
+                      </span>
+                    ))}
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </section>
 
@@ -229,23 +247,32 @@ function Index() {
         <CaseStudies />
 
         <WhyUs />
-        <BeforeAfter />
         <EngineeringPrinciples />
 
-        <section id="process" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-          <h2 className="text-4xl md:text-5xl">
-            HOW WE WORK<span className="text-primary">.</span>
-          </h2>
-          <div className="mt-10 grid gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4">
-            {steps.map((s, i) => (
-              <div key={s.k} className="border-t-2 border-primary pt-6">
-                <span className="font-mono text-sm text-muted-foreground">
-                  0{i + 1}
-                </span>
-                <h3 className="mt-2 text-2xl text-foreground">{s.k}</h3>
-                <p className="mt-3 text-sm text-muted-foreground">{s.v}</p>
-              </div>
-            ))}
+        <section id="process" className="grid-lines relative overflow-hidden border-b border-border">
+          <div className="volt-glow pointer-events-none absolute -right-40 top-0 h-[24rem] w-[24rem] rounded-full" />
+          <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+            <h2 className="text-4xl md:text-5xl">
+              HOW WE WORK<span className="text-primary">.</span>
+            </h2>
+            <div className="mt-10 grid gap-0 border border-border bg-border sm:mt-14 sm:grid-cols-2 sm:gap-0 lg:grid-cols-4">
+              {steps.map((s, i) => (
+                <React.Fragment key={s.k}>
+                  {i > 0 && (
+                    <div className="hidden items-center justify-center bg-border sm:flex lg:block">
+                      <span className="font-display text-2xl text-primary opacity-40">→</span>
+                    </div>
+                  )}
+                  <div className="border-t-2 border-primary pt-6 sm:border-t-0">
+                    <span className="font-mono text-sm text-muted-foreground">
+                      0{i + 1}
+                    </span>
+                    <h3 className="mt-2 text-xl text-foreground">{s.k}</h3>
+                    <p className="mt-3 text-sm text-muted-foreground">{s.v}</p>
+                  </div>
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </section>
 

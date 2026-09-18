@@ -1,14 +1,15 @@
 const stats = [
   { v: "120+", k: "Projects shipped" },
-  { v: "9 yrs", k: "Average team experience" },
+  { v: "50+", k: "Engineers & specialists" },
   { v: "14", k: "Countries served" },
   { v: "98%", k: "Client retention" },
+  { v: "99.9%", k: "Production uptime" },
 ];
 
 export function Stats() {
   return (
     <section className="border-y border-border bg-card/40">
-      <div className="mx-auto grid max-w-6xl gap-px bg-border px-0 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl gap-px bg-border px-0 sm:grid-cols-3 lg:grid-cols-5">
         {stats.map((s) => (
           <div key={s.k} className="bg-background px-6 py-10 text-center sm:px-8 sm:py-12">
             <p className="font-display text-4xl text-primary md:text-5xl">{s.v}</p>
