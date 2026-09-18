@@ -13,13 +13,13 @@ import { BottomNav } from "@/components/site/BottomNav";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "DEV2SOFT — Software Development Company" },
+      { title: "DevToSoft" },
       {
         name: "description",
         content:
-          "DEV2SOFT builds web apps, mobile apps, AI automation and cloud systems. Innovate, automate, elevate.",
+          "DevToSoft builds web apps, mobile apps, AI automation and cloud systems. Innovate, automate, elevate.",
       },
-      { property: "og:title", content: "DEV2SOFT — Software Development Company" },
+      { property: "og:title", content: "DevToSoft | Software Development Company" },
       {
         property: "og:description",
         content: "Custom web, mobile, AI and cloud engineering for teams that need to move fast.",
@@ -135,7 +135,7 @@ function Index() {
               <span className="text-primary">RUNS YOUR BUSINESS.</span>
             </h1>
             <p className="mt-8 max-w-xl text-base text-muted-foreground">
-              DEV2SOFT is a product engineering studio. We design, build and maintain web, mobile
+              DevToSoft is a product engineering studio. We design, build and maintain web, mobile
               and AI systems for companies that need to ship fast without breaking things.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -389,7 +389,7 @@ function Index() {
         </div>
         <div className="border-t border-border">
           <p className="mx-auto max-w-6xl px-6 py-6 font-mono text-xs text-muted-foreground">
-            © {new Date().getFullYear()} DEV2SOFT — Innovate, Automate, Elevate
+            © {new Date().getFullYear()} DevToSoft | Innovate, Automate, Elevate
           </p>
         </div>
       </footer>

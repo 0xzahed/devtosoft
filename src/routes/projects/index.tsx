@@ -5,11 +5,11 @@ import { BottomNav } from "@/components/site/BottomNav";
 export const Route = createFileRoute("/projects/")({
   head: () => ({
     meta: [
-      { title: "Projects — DEV2SOFT" },
+      { title: "Projects | DevToSoft" },
       {
         name: "description",
         content:
-          "Selected work from DEV2SOFT — fintech, logistics, retail, health and education platforms we've built.",
+          "Selected work from DevToSoft: fintech, logistics, retail, health and education platforms we've built.",
       },
     ],
   }),
@@ -98,7 +98,7 @@ function ProjectsPage() {
       <footer className="border-t border-border pb-16 lg:pb-0">
         <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
           <p className="font-mono text-xs text-muted-foreground">
-            © {new Date().getFullYear()} DEV2SOFT — Innovate, Automate, Elevate
+            © {new Date().getFullYear()} DevToSoft | Innovate, Automate, Elevate
           </p>
         </div>
       </footer>

@@ -22,7 +22,7 @@ export function WhyUs() {
     <section id="why" className="grid-lines border-b border-border">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
         <h2 className="text-4xl md:text-5xl">
-          WHY DEV2SOFT<span className="text-primary">.</span>
+          WHY DevToSoft<span className="text-primary">.</span>
         </h2>
         <div className="mt-10 grid gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-10">
           {points.map((p) => (

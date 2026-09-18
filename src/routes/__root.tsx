@@ -77,16 +77,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "DEV2SOFT — Software Development Company" },
+      { title: "DevToSoft" },
       {
         name: "description",
-        content: "DEV2SOFT builds web apps, mobile apps, AI automation and cloud systems.",
+        content: "DevToSoft builds web apps, mobile apps, AI automation and cloud systems.",
       },
-      { name: "author", content: "DEV2SOFT" },
-      { property: "og:title", content: "DEV2SOFT — Software Development Company" },
+      { name: "author", content: "DevToSoft" },
+      { property: "og:title", content: "DevToSoft | Software Development Company" },
       {
         property: "og:description",
-        content: "DEV2SOFT builds web apps, mobile apps, AI automation and cloud systems.",
+        content: "DevToSoft builds web apps, mobile apps, AI automation and cloud systems.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

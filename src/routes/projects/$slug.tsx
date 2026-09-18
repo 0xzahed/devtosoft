@@ -8,10 +8,10 @@ export const Route = createFileRoute("/projects/$slug")({
     const project = getProject(params.slug);
     return {
       meta: [
-        { title: `${project?.title ?? "Project"} — DEV2SOFT` },
+        { title: `${project?.title ?? "Project"} | DevToSoft` },
         {
           name: "description",
-          content: project?.summary ?? "Case study from DEV2SOFT.",
+          content: project?.summary ?? "Case study from DevToSoft.",
         },
       ],
     };
@@ -220,7 +220,7 @@ function ProjectDetailPage() {
       <footer className="border-t border-border pb-16 lg:pb-0">
         <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
           <p className="font-mono text-xs text-muted-foreground">
-            © {new Date().getFullYear()} DEV2SOFT — Innovate, Automate, Elevate
+            © {new Date().getFullYear()} DevToSoft | Innovate, Automate, Elevate
           </p>
         </div>
       </footer>
