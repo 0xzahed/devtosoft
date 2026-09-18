@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * DEV2SOFT design system — logo-derived.
- * Ink black, lime volt accent, paper white. Condensed industrial type.
+ * DevToSoft design system, logo-derived.
+ * Ink black, lime volt accent, paper white. Inter throughout.
  */
 
 @theme inline {
@@ -39,9 +39,9 @@
   --color-ink: var(--ink);
   --color-volt: var(--volt);
   --color-paper: var(--paper);
-  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
-  --font-sans: "Barlow", system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "Inter", system-ui, sans-serif;
 }
 
 :root {
@@ -89,10 +89,13 @@
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
-    letter-spacing: 0.01em;
-    line-height: 0.92;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
   }
 }
 
