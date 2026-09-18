@@ -20,7 +20,7 @@ function ProjectsPage() {
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6 sm:py-3">
           <Link to="/" className="flex items-center gap-3">
             <img src="/logo.png" alt="DevToSoft logo" className="h-8 w-auto sm:h-9" />
           </Link>
