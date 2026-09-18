@@ -312,8 +312,8 @@ function Index() {
                 </p>
                 <p className="text-muted-foreground">
                   PHONE:{" "}
-                  <a href="tel:+8801000000000" className="text-primary hover:underline">
-                    +880 1000-000000
+                  <a href="tel:+8801744546898" className="text-primary hover:underline">
+                    +880 1744-546898
                   </a>
                 </p>
                 <p className="text-muted-foreground">HOURS: Sun–Thu, 10:00–19:00 (GMT+6)</p>
@@ -379,8 +379,8 @@ function Index() {
                 </a>
               </li>
               <li>
-                <a href="tel:+8801000000000" className="hover:text-foreground">
-                  +880 1000-000000
+                <a href="tel:+8801744546898" className="hover:text-foreground">
+                  +880 1744-546898
                 </a>
               </li>
               <li>Dhaka, Bangladesh</li>
