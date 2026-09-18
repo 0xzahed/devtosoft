@@ -1,15 +1,29 @@
 import { useEffect, useState } from "react";
 import { Home, Briefcase, Layers, Tag, Mail } from "lucide-react";
+import { useContent } from "@/components/site/ContentProvider";
 
-const items = [
-  { id: "top", label: "Home", icon: Home },
-  { id: "services", label: "Services", icon: Layers },
-  { id: "work", label: "Work", icon: Briefcase },
-  { id: "pricing", label: "Pricing", icon: Tag },
-  { id: "contact", label: "Contact", icon: Mail },
-];
+type NavItem = { id: string; label: string; icon: typeof Home };
+
+function removeUndefined<T>(items: (T | undefined)[]): T[] {
+  return items.filter((i): i is T => Boolean(i));
+}
 
 export function BottomNav() {
+  const { content } = useContent();
+
+  const byLabel: Record<string, NavItem> = {
+    Services: { id: "services", label: "Services", icon: Layers },
+    Work: { id: "work", label: "Work", icon: Briefcase },
+    Pricing: { id: "pricing", label: "Pricing", icon: Tag },
+    Contact: { id: "contact", label: "Contact", icon: Mail },
+  };
+
+  const items: NavItem[] = removeUndefined([
+    { id: "top", label: "Home", icon: Home },
+    ...content.navbar.links.map((l) => byLabel[l.label]),
+    byLabel["Contact"],
+  ]).slice(0, 5);
+
   const [active, setActive] = useState("top");
 
   useEffect(() => {
@@ -28,7 +42,7 @@ export function BottomNav() {
 
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
-  }, []);
+  }, [items]);
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-background/95 backdrop-blur lg:hidden">

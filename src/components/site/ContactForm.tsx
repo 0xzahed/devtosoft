@@ -1,16 +1,21 @@
 import { useState } from "react";
-
-const budgets = ["< $5k", "$5k – $20k", "$20k – $50k", "$50k+"];
-const needs = ["Web platform", "Mobile app", "AI automation", "Cloud & DevOps", "Not sure yet"];
+import { useContent } from "@/components/site/ContentProvider";
 
 export function ContactForm() {
-  const [budget, setBudget] = useState(budgets[1]);
+  const { content } = useContent();
+  const budgets = content.contact.formDefaults.budgets.length
+    ? content.contact.formDefaults.budgets
+    : ["< $5k", "$5k – $20k"];
+  const needs = content.contact.formDefaults.needs.length
+    ? content.contact.formDefaults.needs
+    : ["Web platform", "Not sure yet"];
+  const [budget, setBudget] = useState(budgets[1] ?? budgets[0]);
   const [need, setNeed] = useState(needs[0]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
 
-  const mailto = `mailto:hello@dev2soft.com?subject=${encodeURIComponent(
+  const mailto = `mailto:${content.global.contactEmail}?subject=${encodeURIComponent(
     `Project enquiry: ${need}`,
   )}&body=${encodeURIComponent(
     `Name: ${name}\nEmail: ${email}\nNeed: ${need}\nBudget: ${budget}\n\n${msg}`,

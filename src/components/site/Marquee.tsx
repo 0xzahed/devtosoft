@@ -1,13 +1,12 @@
-const items = [
-  "WEB APPS",
-  "MOBILE APPS",
-  "AI AUTOMATION",
-  "CLOUD & DEVOPS",
-  "UI/UX DESIGN",
-  "API INTEGRATION",
-];
+import { useContent } from "@/components/site/ContentProvider";
 
 export function Marquee() {
+  const { content } = useContent();
+  const items =
+    content.services.items.length > 0
+      ? content.services.items.map((s) => s.title)
+      : ["WEB APPS", "MOBILE APPS", "AI AUTOMATION"];
+
   return (
     <div className="overflow-hidden border-y border-border bg-primary py-3">
       <div className="flex w-max animate-[marquee_28s_linear_infinite] gap-10">

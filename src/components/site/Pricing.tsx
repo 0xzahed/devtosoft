@@ -1,46 +1,17 @@
-const plans = [
-  {
-    name: "SPRINT",
-    price: "$2,900",
-    unit: "/ 2 weeks",
-    desc: "A focused build for one clear outcome.",
-    features: ["1 senior engineer", "Weekly demo", "Fixed scope", "Source handover"],
-    featured: false,
-  },
-  {
-    name: "PRODUCT",
-    price: "$7,500",
-    unit: "/ month",
-    desc: "A full squad shipping your roadmap.",
-    features: [
-      "2–3 engineers + designer",
-      "Discovery & roadmap",
-      "CI/CD + monitoring",
-      "Slack channel, same-day replies",
-      "Unlimited revisions in cycle",
-    ],
-    featured: true,
-  },
-  {
-    name: "RETAINER",
-    price: "Custom",
-    unit: "",
-    desc: "Long-term ownership, support and scaling.",
-    features: ["SLA support", "Security hardening", "Cost optimisation", "Dedicated tech lead"],
-    featured: false,
-  },
-];
+import { useContent } from "@/components/site/ContentProvider";
 
 export function Pricing() {
+  const { content } = useContent();
+  const { title, subtitle, cta, plans } = content.pricing;
+
   return (
     <section id="pricing" className="border-y border-border bg-card/40">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
         <h2 className="text-4xl md:text-5xl">
-          ENGAGEMENT<span className="text-primary">.</span>
+          {title}
+          <span className="text-primary">.</span>
         </h2>
-        <p className="mt-6 max-w-xl text-base text-muted-foreground">
-          Pick how you want to work with us. No lock-in, cancel between cycles.
-        </p>
+        <p className="mt-6 max-w-xl text-base text-muted-foreground">{subtitle}</p>
         <div className="mt-10 grid gap-px bg-border sm:mt-14 md:grid-cols-3">
           {plans.map((p) => (
             <div
@@ -90,7 +61,7 @@ export function Pricing() {
                     : "border-border text-foreground hover:border-primary hover:text-primary"
                 }`}
               >
-                Get started
+                {cta}
               </a>
             </div>
           ))}

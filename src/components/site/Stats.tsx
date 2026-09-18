@@ -1,12 +1,9 @@
-const stats = [
-  { v: "120+", k: "Projects shipped" },
-  { v: "50+", k: "Engineers & specialists" },
-  { v: "14", k: "Countries served" },
-  { v: "98%", k: "Client retention" },
-  { v: "99.9%", k: "Production uptime" },
-];
+import { useContent } from "@/components/site/ContentProvider";
 
 export function Stats() {
+  const { content } = useContent();
+  const stats = content.stats;
+
   return (
     <section className="border-y border-border bg-card/40">
       <div className="mx-auto grid max-w-6xl gap-px bg-border px-0 sm:grid-cols-3 lg:grid-cols-5">

@@ -1,35 +1,17 @@
 import { useState } from "react";
-
-const faqs = [
-  {
-    q: "How fast can you start?",
-    a: "Usually within one week. Discovery can begin in 48 hours for urgent projects.",
-  },
-  {
-    q: "Do we own the code?",
-    a: "Yes. Everything lives in your repository from day one, under your license.",
-  },
-  {
-    q: "Can you work with our existing team?",
-    a: "Often we do. We plug into your board, your reviews and your release process.",
-  },
-  {
-    q: "What about maintenance after launch?",
-    a: "We offer a support retainer with monitoring, patching and an agreed response SLA.",
-  },
-  {
-    q: "How do you handle NDAs and security?",
-    a: "NDA before the first call if you want. We follow least-privilege access and audited secrets.",
-  },
-];
+import { useContent } from "@/components/site/ContentProvider";
 
 export function FAQ() {
+  const { content } = useContent();
+  const { title, items: faqs } = content.faq;
   const [open, setOpen] = useState<number | null>(0);
+
   return (
     <section id="faq" className="border-y border-border bg-card/40">
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
         <h2 className="text-4xl md:text-5xl">
-          FAQ<span className="text-primary">.</span>
+          {title}
+          <span className="text-primary">.</span>
         </h2>
         <div className="mt-14">
           {faqs.map((f, i) => (
